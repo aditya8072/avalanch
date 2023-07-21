@@ -10,7 +10,7 @@ contract ErrorHandlingExample {
     }
 
     function withdraw(uint256 amount) public {
-        require(amount > 0, "Enter the insufficent balance");
+        require(amount > 0, "amount is greater than zero");
         require(amount <= totalBalance, "Insufficient balance");
 
         totalBalance -= amount;
